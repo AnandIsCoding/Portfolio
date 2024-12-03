@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik+Wet+Paint&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: gilroy;
+  
+}
+
+
+.marguee{
+  font-family: "Anton", serif;
+}
