@@ -8,6 +8,8 @@ import Footer from './components/Footer'
 import LocomotiveScroll from 'locomotive-scroll'
 
 
+
+
 function App() {
   const locomotiveScroll = new LocomotiveScroll()
   const [openPanel, setOpenpanel] = useState(false)

@@ -1,33 +1,89 @@
 import { motion } from 'framer-motion'
 import React from 'react'
+import {NavLink} from 'react-router-dom'
+import { ImGithub } from "react-icons/im";
 
 function Projects() {
   
   return (
-    <div  className='w-full py-10 '> 
+    <div  className='w-full py-10 flex-wrap'  id="about"> 
       <div className='w-full px-02 border-b-[1px] border-zinc-400 pb-10'>
-        <h1 className='text-4xl md:text-7xl' >Featured Projects</h1>
-
-        
+        <h1 className='text-4xl md:text-7xl' >Featured Projects</h1>        
       </div>
 
-      <div className='cards w-full flex flex-col md:flex-row gap-10 mt-10 px-2 md:px-20'>
-            <div className='card  md:w-1/2 h-[80vh]  rounded-xl'>
-                <div className='w-full h-full rounded-xl bg-blue-400 relative  duration-[1s] hover:scale-75'>
-                    <img src='/gen_image.png' alt='project_image' className='w-full h-full rounded-xl object-cover' />
+        <div className='cards w-full flex flex-col md:flex-row gap-6 mt-10 px-0 md:px-20 '>
 
-                    <img src='/result.png' alt='project_image' className='w-[60vw] h-[60vw]  md:w-[20vw] md:h-[20vw] absolute rounded-xl object-fit right-2 top-4 border-4 border-white hover:scale-125 duration-[2s]' />
+             
+        <div className='h-[65vh] md:h-[75vh] md:w-[50%] bg-violet-400 rounded-xl p-1 md:p-4 overflow-hidden'>
+       <div className='w-full h-[84%]  rounded-xl flex gap-1 md:gap-3 '>
+                <img src='/tinderSignup.png' alt='tinderSignupPage' className='w-[33%] md:w-[33%] h-full rounded-lg' />
+                <img src='/tinderFeed.png' alt='tinderFeedPage' className='w-[33%] md:w-[33%] h-full rounded-lg' />
+                <img src='/tinderOptions.png' alt='tinderOptions' className=' w-[33%] md:w-[33%] h-full rounded-lg' />
+                </div>
+                <div className='flex gap-10 justify-center items-center pt-5'> 
+                    <NavLink to='https://lovefinder.onrender.com' target='_blank' className='px-4 py-2 rounded-lg bg-[white] text-xl font-bold text-black'>Live Privew</NavLink>
+                    <NavLink to='https://github.com/AnandIsCoding/Tinder-Replica.git' target='_blank' className='px-4 py-2 rounded-lg bg-[white] text-xl font-bold text-black flex gap-2'> <ImGithub size={24} /> <span> Github</span> </NavLink>
                 </div>
             </div>
 
-            <div className='card md:w-1/2 h-[85vh] rounded-xl'>
-            <div className='w-full h-full rounded-xl  duration-[1s] flex flex-col md:flex-row hover:scale-75'>
-            <img src='/caber_home.png' alt='project_image' className='md:w-1/2 h-full rounded-xl object-cover  ' />
 
-            <img src='/caber.png' alt='project_image' className='md:w-1/2 h-full  rounded-xl object-fit ml-4  ' />
+            <div className='h-[65vh] md:h-[75vh] md:w-[50%] bg-violet-400 rounded-xl p-2 md:p-4'>
+                <div className='w-full h-[84%] bg-white rounded-xl'>
+                    <img src='/gen_image.png' alt='Image generator image' className='w-full h-full rounded-xl object-fit' />
+                </div>
+                <div className='flex gap-10 justify-center items-center pt-5'> 
+                    <NavLink to='https://genmyimage.onrender.com/' target='_blank' className='px-4 py-2  rounded-lg bg-[white] text-xl font-bold text-black '>Live Privew</NavLink>
+                    <NavLink to='https://github.com/AnandIsCoding/Full-Stack-AI-Image-Generator' target='_blank' className='px-4 py-2 rounded-lg bg-[white] text-xl font-bold text-black flex gap-2'> <ImGithub size={24} /> <span> Github</span> </NavLink>
+                </div>
             </div>
-            </div>
+
+
+            {/* <div className='h-[65vh] md:h-[75vh] md:w-[50%] bg-violet-400 rounded-xl p-4'>
+       <div className='w-full h-[84%]  rounded-xl flex gap-8'>
+                <img src='/tinderSignup.png' alt='tinderSignupPage' className='w-[1/2] h-full ' />
+                <img src='/tinderFeed.png' alt='tinderFeedPage' className='w-[1/2] h-full ' />
+                <img src='/tinderOptions.png' alt='tinderOptions' className='w-[1/2] h-full ' />
+                </div>
+                <div className='flex gap-10 justify-center items-center pt-5'> 
+                    <NavLink to='https://lovefinder.onrender.com' target='_blank' className='px-4 py-2 rounded-lg bg-[white] text-xl font-bold text-black'>Live Privew</NavLink>
+                    <NavLink to='https://github.com/AnandIsCoding/Tinder-Replica.git' target='_blank' className='px-4 py-2 rounded-lg bg-[white] text-xl font-bold text-black flex gap-2'> <ImGithub size={24} /> <span> Github</span> </NavLink>
+                </div>
+            </div> */}
+
+
+           
+
+            
         </div>
+
+       <div className=' w-full flex flex-col md:flex-row gap-6 mt-10 px-0 md:px-20 '>
+       
+
+            <div className='h-[65vh] md:h-[75vh] md:w-[50%] rounded-b-xl bg-violet-400 p-1 md:p-4'>
+                <div className='w-full h-[84%]   flex gap-1 md:gap-3'>
+                <img src='/caberProject1.png' alt='caberProject_home_page' className='w-[33%] md:w-[33%] h-full rounded-lg' />
+                <img src='/caberProject2.png' alt='caberProject_login_page' className='w-[33%] md:w-[33%] h-full rounded-lg ' />
+                <img src='/caberProject3.png' alt='Serach_Page' className='w-[33%] md:w-[33#] h-full rounded-lg' />
+                </div>
+                <div className='flex gap-10 justify-center items-center pt-5'> 
+                    <NavLink to='https://mycar-hwz0.onrender.com/' target='_blank' className='px-4 py-2 rounded-lg bg-[white] text-xl font-bold text-black'>Live Privew</NavLink>
+                    <NavLink to='https://github.com/AnandIsCoding/Uber-replica.git' target='_blank' className='px-4 py-2 rounded-lg bg-[white] text-xl font-bold text-black flex gap-2'> <ImGithub size={24} /> <span> Github</span> </NavLink>
+                </div>
+            </div>
+
+            <div className='h-[65vh] md:h-[75vh] md:w-[50%] bg-violet-400 rounded-xl p-1 md:p-4'>
+                <div className='w-full h-[84%] bg-white rounded-xl flex overflow-hidden'>
+                <img src='/chatApp1.png' alt='profile_mychatsPage' className='w-[65%] h-full ' />
+                <img src='/chatApp2.png' alt='chattingScreen' className='w-[35%] h-full ' />
+                <h1 className=' absolute top-10 right-20 font-bold  text-white'>chatting screen</h1>
+                </div>
+                <div className='flex gap-10 justify-center items-center pt-5'> 
+                    <NavLink onClick={()=>alert('Chat Application is not deployed yet, sorry for the inconvenience')} className='px-4 py-2 rounded-lg bg-[white] text-xl font-bold text-black'>Live Privew</NavLink>
+                    <NavLink to='https://github.com/AnandIsCoding/Full-Stack-Chat-Application' target='_blank' className='px-4 py-2  rounded-lg bg-[white] text-xl font-bold text-black flex gap-2'> <ImGithub size={24} /> <span> Github</span> </NavLink>
+                </div>
+            </div>
+
+       </div>
     </div>
   )
 }

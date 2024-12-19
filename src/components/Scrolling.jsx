@@ -4,7 +4,7 @@ import React from 'react'
 function Scrolling() {
   
   return (
-    <div data-scroll data-scroll-section data-scroll-speed='.1' className='w-full   bg-[#004D43] rounded-t-xl pt-12 pb-[1.5rem] flex  overflow-hidden whitespace-nowrap gap-10 z-[999]'>
+    <div  className='w-full   bg-[#004D43] rounded-t-xl pt-12 pb-[1.5rem] flex  overflow-hidden whitespace-nowrap gap-10 z-[999]'>
 
    
    

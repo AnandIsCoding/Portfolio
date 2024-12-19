@@ -3,32 +3,35 @@ import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
 import { RiCloseLargeFill } from "react-icons/ri";
+import { NavLink, useNavigate } from "react-router-dom";
+import { Link } from "react-scroll";
 
 function Navbar({ openPanel, setOpenpanel }) {
+  const navigate = useNavigate()
 
   return (
     <div className="fixed flex w-full h-[10vh] backdrop-blur-2xl z-[999]">
-      <div  className="w-[45%] h-full text-3xl md:text-4xl font-semibold px-10 py-5 text-black">
+      <div onClick={()=>navigate('/')} className="w-[48%] h-full text-3xl md:text-4xl font-semibold px-10 py-5 text-black cursor-pointer">
         Anand
       </div>
 
       <div className="w-[35%] h-full  justify-between py-7 hidden md:flex">
-        <h1 className="text-xl font-normal hover:animate-bounce duration-[1s] hover:text-violet-600 cursor-pointer ">
+        <h1 className="text-xl font-normal hover:text-violet-600  cursor-pointer ">
           Services
         </h1>
-        <h1 className="text-xl font-normal hover:animate-bounce duration-[1s] hover:text-violet-600 cursor-pointer ">
-          Our work
-        </h1>
-        <h1 className="text-xl font-normal hover:animate-bounce duration-[1s] hover:text-violet-600 cursor-pointer ">
-          About us
-        </h1>
-        <h1 className="text-xl font-normal hover:animate-bounce duration-[1s] hover:text-violet-600 cursor-pointer ">
+        <Link to="about" smooth={true} duration={2000} className="text-xl font-normal  hover:text-violet-600  cursor-pointer ">
+          Projects
+        </Link>
+        <NavLink  className="text-xl font-normal  cursor-pointer  hover:text-violet-600 ">
+          About me
+        </NavLink>
+        <h1 className="text-xl font-normal  cursor-pointer  hover:text-violet-600">
           Insights
         </h1>
       </div>
 
       <div className="w-[20%] h-full px-20 py-6 ">
-        <h1 className="hidden md:flex text-2xl font-normal hover:animate-bounce duration-[1s] hover:text-violet-600 cursor-pointer ml-20 ">
+        <h1 className="hidden md:flex text-2xl font-normal cursor-pointer ml-20 ">
           Contact
         </h1>
 
@@ -80,9 +83,9 @@ function Navbar({ openPanel, setOpenpanel }) {
           <h1 className="text-[15vw] font-bold text-white cursor-pointer ">
             SERVICES
           </h1>
-          <h1 className="text-[12vw] font-bold text-white cursor-pointer ">
-            OUR WORK
-          </h1>
+          <Link onClick={()=>setOpenpanel(prev => !prev)} to="about" smooth={true} duration={2000} className="text-[12vw] font-bold text-white cursor-pointer ">
+            Projects
+          </Link>
           <h1 className="text-[10vw] font-bold text-white cursor-pointer ">
             ABOUT US
           </h1>
