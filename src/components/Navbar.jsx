@@ -20,14 +20,14 @@ function Navbar({ openPanel, setOpenpanel }) {
         <Link to="skills" smooth={true} duration={3000}  className="text-2xl font-semibold hover:text-violet-600  cursor-pointer ">
           Skills
         </Link>
-        <Link to="about" smooth={true} duration={2000} className="text-2xl font-semibold  hover:text-violet-600  cursor-pointer ">
+        <Link to="projects" smooth={true} duration={2000} className="text-2xl font-semibold  hover:text-violet-600  cursor-pointer ">
           Projects
         </Link>
         <NavLink to='/about'  className="text-2xl font-semibold  cursor-pointer  hover:text-violet-600 ">
           About me
         </NavLink>
         <h1 className="text-2xl font-semibold  cursor-pointer  hover:text-violet-600">
-          Insights
+          Get Resume
         </h1>
       </div>
 
@@ -84,15 +84,18 @@ function Navbar({ openPanel, setOpenpanel }) {
           <Link to="skills" smooth={true} duration={3000} onClick={()=>setOpenpanel(prev => !prev)} className="block text-[12vw] font-bold text-white cursor-pointer ">
             SKILLS
           </Link>
-          <Link onClick={()=>setOpenpanel(prev => !prev)} to="about" smooth={true} duration={2000} className="text-[12vw] font-bold text-white cursor-pointer ">
+          <Link onClick={()=>setOpenpanel(prev => !prev)} to="projects" smooth={true} duration={2000} className="text-[12vw] font-bold text-white cursor-pointer ">
             Projects
           </Link>
-          <h1 className="text-[10vw] font-bold text-white cursor-pointer ">
-            ABOUT ms
-          </h1>
-          <NavLink to='/contact' className="text-[10vw] font-bold text-white cursor-pointer ">
+          <NavLink to='/about' onClick={()=>setOpenpanel(prev => !prev)} className="text-[10vw] block font-bold text-white cursor-pointer ">
+            About Me
+          </NavLink>
+          <NavLink to='/contact' onClick={()=>setOpenpanel(prev => !prev)} className="text-[10vw] font-bold text-white cursor-pointer ">
             Contact
           </NavLink>
+          <h1 className="text-[10vw] font-bold  cursor-pointer text-white hover:text-violet-600">
+          Get Resume
+        </h1>
           <div className={`w-full h-[1px] bg-white mt-4 `}></div>
 
           <br></br>
@@ -100,22 +103,17 @@ function Navbar({ openPanel, setOpenpanel }) {
             <h1 className="text-[4vw] underline font-bold text-white cursor-pointer ">
               Socials
             </h1>
-            <a
-              target="_blank"
-              href="https://google.com "
-              className="text-[7vw] font-bold text-white cursor-pointer mt-3"
-            >
-              Instagram
-            </a>
+            <NavLink onClick={()=>setOpenpanel(prev => !prev)} to='https://github.com/AnandIsCoding' target='_blank' className="text-[7vw] font-bold text-white cursor-pointer ">
+              Github
+            </NavLink>
+            
             <a className="text-[7vw] font-bold text-white cursor-pointer ">
               Linkdeln
             </a>
             <a className="text-[7vw] font-bold text-white cursor-pointer ">
               Facebook
             </a>
-            <a className="text-[7vw] font-bold text-white cursor-pointer ">
-              Github
-            </a>
+            
 
             <h1 className="text-[4vw] underline font-bold text-white cursor-pointer mt-6">
               Address

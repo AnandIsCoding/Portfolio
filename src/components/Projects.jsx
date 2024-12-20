@@ -6,7 +6,7 @@ import { ImGithub } from "react-icons/im";
 function Projects() {
   
   return (
-    <div  className='w-full py-10 flex-wrap'  id="about"> 
+    <div  className='w-full py-10 flex-wrap'  id="projects"> 
       <div className='w-full px-02 border-b-[1px] border-zinc-400 pb-10'>
         <h1 className='text-4xl md:text-7xl' >Featured Projects</h1>        
       </div>
@@ -38,22 +38,7 @@ function Projects() {
             </div>
 
 
-            {/* <div className='h-[65vh] md:h-[75vh] md:w-[50%] bg-violet-400 rounded-xl p-4'>
-       <div className='w-full h-[84%]  rounded-xl flex gap-8'>
-                <img src='/tinderSignup.png' alt='tinderSignupPage' className='w-[1/2] h-full ' />
-                <img src='/tinderFeed.png' alt='tinderFeedPage' className='w-[1/2] h-full ' />
-                <img src='/tinderOptions.png' alt='tinderOptions' className='w-[1/2] h-full ' />
-                </div>
-                <div className='flex gap-10 justify-center items-center pt-5'> 
-                    <NavLink to='https://lovefinder.onrender.com' target='_blank' className='px-4 py-2 rounded-lg bg-[white] text-xl font-bold text-black'>Live Privew</NavLink>
-                    <NavLink to='https://github.com/AnandIsCoding/Tinder-Replica.git' target='_blank' className='px-4 py-2 rounded-lg bg-[white] text-xl font-bold text-black flex gap-2'> <ImGithub size={24} /> <span> Github</span> </NavLink>
-                </div>
-            </div> */}
-
-
            
-
-            
         </div>
 
        <div className=' w-full flex flex-col md:flex-row gap-6 mt-10 px-0 md:px-20 '>
