@@ -6,6 +6,7 @@ import { RiCloseLargeFill } from "react-icons/ri";
 import { NavLink, useNavigate } from "react-router-dom";
 import { Link } from "react-scroll";
 
+
 function Navbar({ openPanel, setOpenpanel }) {
   const navigate = useNavigate()
 
@@ -16,24 +17,24 @@ function Navbar({ openPanel, setOpenpanel }) {
       </div>
 
       <div className="w-[35%] h-full  justify-between py-7 hidden md:flex">
-        <h1 className="text-xl font-normal hover:text-violet-600  cursor-pointer ">
-          Services
-        </h1>
-        <Link to="about" smooth={true} duration={2000} className="text-xl font-normal  hover:text-violet-600  cursor-pointer ">
+        <Link to="skills" smooth={true} duration={3000}  className="text-2xl font-semibold hover:text-violet-600  cursor-pointer ">
+          Skills
+        </Link>
+        <Link to="about" smooth={true} duration={2000} className="text-2xl font-semibold  hover:text-violet-600  cursor-pointer ">
           Projects
         </Link>
-        <NavLink  className="text-xl font-normal  cursor-pointer  hover:text-violet-600 ">
+        <NavLink to='/about'  className="text-2xl font-semibold  cursor-pointer  hover:text-violet-600 ">
           About me
         </NavLink>
-        <h1 className="text-xl font-normal  cursor-pointer  hover:text-violet-600">
+        <h1 className="text-2xl font-semibold  cursor-pointer  hover:text-violet-600">
           Insights
         </h1>
       </div>
 
       <div className="w-[20%] h-full px-20 py-6 ">
-        <h1 className="hidden md:flex text-2xl font-normal cursor-pointer ml-20 ">
+        <NavLink to='/contact' className="hidden md:flex text-2xl font-bold cursor-pointer ml-20 ">
           Contact
-        </h1>
+        </NavLink>
 
         <h1
           onClick={() => setOpenpanel(!openPanel)}
@@ -64,7 +65,7 @@ function Navbar({ openPanel, setOpenpanel }) {
           } `}
         >
           {!openPanel ? (
-            <GiHamburgerMenu />
+            <GiHamburgerMenu className="mr-4" />
           ) : (
             <RiCloseLargeFill className="font-bold" />
           )}
@@ -80,18 +81,18 @@ function Navbar({ openPanel, setOpenpanel }) {
             !openPanel ? "hidden" : "absolute top-20 leading-1 px-6"
           } `}
         >
-          <h1 className="text-[15vw] font-bold text-white cursor-pointer ">
-            SERVICES
-          </h1>
+          <Link to="skills" smooth={true} duration={3000} onClick={()=>setOpenpanel(prev => !prev)} className="block text-[12vw] font-bold text-white cursor-pointer ">
+            SKILLS
+          </Link>
           <Link onClick={()=>setOpenpanel(prev => !prev)} to="about" smooth={true} duration={2000} className="text-[12vw] font-bold text-white cursor-pointer ">
             Projects
           </Link>
           <h1 className="text-[10vw] font-bold text-white cursor-pointer ">
-            ABOUT US
+            ABOUT ms
           </h1>
-          <h1 className="text-[10vw] font-bold text-white cursor-pointer ">
-            INSIGHTS
-          </h1>
+          <NavLink to='/contact' className="text-[10vw] font-bold text-white cursor-pointer ">
+            Contact
+          </NavLink>
           <div className={`w-full h-[1px] bg-white mt-4 `}></div>
 
           <br></br>

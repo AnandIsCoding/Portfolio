@@ -6,3 +6,9 @@ export default defineConfig({
   plugins: [react()],
   
 })
+
+
+
+// npm run dev -- --host
+
+// Network: http://192.168.X.X:5173/
