@@ -110,9 +110,9 @@ function Navbar({ openPanel, setOpenpanel }) {
             <a className="text-[7vw] font-bold text-white cursor-pointer ">
               Linkdeln
             </a>
-            <a className="text-[7vw] font-bold text-white cursor-pointer ">
+            <NavLink to='www.linkedin.com/in/anandjha123' target='_blank' className="text-[7vw] font-bold text-white cursor-pointer ">
               Facebook
-            </a>
+            </NavLink>
             
 
             <h1 className="text-[4vw] underline font-bold text-white cursor-pointer mt-6">

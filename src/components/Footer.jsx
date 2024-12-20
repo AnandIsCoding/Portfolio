@@ -21,7 +21,7 @@ function Footer() {
        <div className='flex flex-col gap-2'>
        <NavLink to='/contact'  className='font-semibold text-xl md:text-2xl' >Contact me</NavLink>
         <NavLink to='https://github.com/AnandIsCoding' target="_blank" className='font-semibold text-xl' >Github</NavLink>
-        <a href='https://google.com' className='font-semibold text-xl' >Instagram</a>
+        <a  href='www.linkedin.com/in/anandjha123' target="_blank" className='font-semibold text-xl' >Linkdein</a>
         <a href='https://google.com' className='font-semibold text-xl' >Instagram</a>
         <a href='https://google.com' className='font-semibold text-xl' >Instagram</a>
        </div>
@@ -29,7 +29,7 @@ function Footer() {
        <div className='flex flex-col gap-2'>
        <NavLink to='/contact'  className='font-semibold text-xl md:text-2xl' >Contact me</NavLink>
        <NavLink to='https://github.com/AnandIsCoding' target="_blank" className='font-semibold text-xl' >Github</NavLink>
-        <a href='https://google.com' className='font-semibold text-xl' >Instagram</a>
+        <a href='www.linkedin.com/in/anandjha123' target="_blank" className='font-semibold text-xl' >Linkdein</a>
         <a href='https://google.com' className='font-semibold text-xl' >Instagram</a>
         <a href='https://google.com' className='font-semibold text-xl' >Instagram</a>
         
