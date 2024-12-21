@@ -27,7 +27,7 @@ function Navbar({ openPanel, setOpenpanel }) {
           About me
         </NavLink>
         <NavLink
-  to="/AnandResume1.pdf" // Replace "AnandResume1.pdf" with your actual filename
+  to="/Anandjharesume.pdf" // Replace "AnandResume1.pdf" with your actual filename
   target="_blank"
   rel="noopener noreferrer"
   className="text-2xl font-semibold cursor-pointer bg-[#27DFB3] px-5 py-6 mt-[-10px] animate-bounce duration-500 flex items-center rounded-lg"
@@ -100,7 +100,7 @@ function Navbar({ openPanel, setOpenpanel }) {
             Contact
           </NavLink>
           <NavLink onClick={()=>setOpenpanel(prev => !prev)} 
-  to="/AnandResume1.pdf" // Replace "AnandResume1.pdf" with your actual filename
+  to="/Anandjharesume.pdf" // Replace "AnandResume1.pdf" with your actual filename
   target="_blank"
   rel="noopener noreferrer"
   className="text-2xl font-semibold cursor-pointer bg-[#27DFB3] px-5 py-3 mt-[-5px] flex items-center text-black rounded-lg"
