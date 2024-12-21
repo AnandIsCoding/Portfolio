@@ -26,9 +26,15 @@ function Navbar({ openPanel, setOpenpanel }) {
         <NavLink to='/about'  className="text-2xl font-semibold  cursor-pointer  hover:text-violet-600 ">
           About me
         </NavLink>
-        <h1 className="text-2xl font-semibold  cursor-pointer  hover:text-violet-600">
-          Get Resume
-        </h1>
+        <NavLink
+  to="/AnandResume1.pdf" // Replace "AnandResume1.pdf" with your actual filename
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-2xl font-semibold cursor-pointer bg-[#27DFB3] px-5 py-6 mt-[-10px] animate-bounce duration-500 flex items-center rounded-lg"
+>
+  Get Resume
+</NavLink>
+
       </div>
 
       <div className="w-[20%] h-full px-20 py-6 ">
@@ -72,7 +78,7 @@ function Navbar({ openPanel, setOpenpanel }) {
         </h1>
         <div
           className={`w-full h-[1px] bg-white ${
-            !openPanel ? "hidden" : "absolute top-24"
+            !openPanel ? "hidden" : "absolute top-24 z-[999]"
           }  `}
         ></div>
 
@@ -93,9 +99,14 @@ function Navbar({ openPanel, setOpenpanel }) {
           <NavLink to='/contact' onClick={()=>setOpenpanel(prev => !prev)} className="text-[10vw] font-bold text-white cursor-pointer ">
             Contact
           </NavLink>
-          <h1 className="text-[10vw] font-bold  cursor-pointer text-white hover:text-violet-600">
-          Get Resume
-        </h1>
+          <NavLink onClick={()=>setOpenpanel(prev => !prev)} 
+  to="/AnandResume1.pdf" // Replace "AnandResume1.pdf" with your actual filename
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-2xl font-semibold cursor-pointer bg-[#27DFB3] px-5 py-3 mt-[-5px] flex items-center text-black rounded-lg"
+>
+  Get Resume
+</NavLink>
           <div className={`w-full h-[1px] bg-white mt-4 `}></div>
 
           <br></br>
@@ -107,12 +118,10 @@ function Navbar({ openPanel, setOpenpanel }) {
               Github
             </NavLink>
             
-            <a className="text-[7vw] font-bold text-white cursor-pointer ">
+            <a onClick={()=>setOpenpanel(prev => !prev)} href='www.linkedin.com/in/anandjha123' target="_blank" className="text-[7vw] font-bold text-white cursor-pointer ">
               Linkdeln
             </a>
-            <NavLink to='www.linkedin.com/in/anandjha123' target='_blank' className="text-[7vw] font-bold text-white cursor-pointer ">
-              Facebook
-            </NavLink>
+            
             
 
             <h1 className="text-[4vw] underline font-bold text-white cursor-pointer mt-6">

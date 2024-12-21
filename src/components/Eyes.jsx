@@ -17,8 +17,8 @@ function Eyes() {
         })
     },)
   return (
-    <div  className="eyes w-full px-2 md:px-0  h-screen overflow-hidden mt-[-40vw] md:mt-0 ">
-      <div className='relative w-full h-full bg-cover bg-center bg-[url("image.jpg")]'>
+    <div  className="eyes w-full px-2 md:px-0  h-screen overflow-hidden mt-[-37vw] md:mt-0 ">
+      <div className='relative w-full h-full bg-cover bg-center bg-[url("/image.jpg")]'>
         <div className="absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%]   flex gap-10">
 
 

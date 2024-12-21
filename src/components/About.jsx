@@ -17,7 +17,7 @@ function About() {
                 <img src='https://akubihar.ac.in/slider/slide1.jpg' alt='bca_college' className='w-full h-full object-cover rounded-xl ' />
               </div>
               <h1 className='text-black text-xl font-semibold ml-2 mt-2'>BCA Graduate</h1>
-              <h1 className='text-black text-lg font-bold ml-2 '>8.89 CGPA</h1>
+              <h1 className='text-black text-lg font-bold ml-2 '>8.919 CGPA</h1>
               <h2 className='text-black text-lg font-semibold ml-2'>Vidya Vihar Institute of Technology</h2>
             </div>
 

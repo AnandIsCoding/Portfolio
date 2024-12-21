@@ -34,7 +34,7 @@ function Slider() {
   ];
 
   return (
-    <div className="py-10 m-2 mt-[-7vw] md:mx-2 relative overflow-hidden" id="skills">
+    <div className="py-10 m-2 mt-[-7vw] md:mx-2 z-[9] relative overflow-hidden" id="skills">
       {logos.map((item, index) => (
         <SingleSlide direction={index === 0 ? 'left' : 'right'} key={index} imagesurl={item} />
       ))}
