@@ -6,8 +6,8 @@ function Contact() {
       <div className="w-full md:w-[40%] h-[40%] md:h-[80%] my-auto rounded-lg">
         <img
           src="https://ik.imagekit.io/sheryians/three.js/three_8IbmQpggex.webp"
-          alt="image"
-          className="w-full h-full object-fit rounded-xl"
+          alt="Contact illustration"
+          className="w-full h-full object-cover rounded-xl"
         />
       </div>
       <div className="bg-[#2C2C2C] w-full md:w-[60%] h-[72%] md:h-[80%] my-auto rounded-lg">
@@ -22,8 +22,15 @@ function Contact() {
             name="contact"
             method="POST"
             data-netlify="true"
+            data-netlify-honeypot="bot-field" // Adds a honeypot field for spam prevention
           >
+            {/* Honeypot field for spam protection */}
             <input type="hidden" name="form-name" value="contact" />
+            <p className="hidden">
+              <label>
+                Don’t fill this out: <input name="bot-field" />
+              </label>
+            </p>
 
             <h1 className="text-white mt-1 text-xl font-semibold">Your Good Name</h1>
             <input
@@ -34,7 +41,7 @@ function Contact() {
               required
             />
 
-            <h1 className="text-white mt-4 text-xl font-semibold">Your email</h1>
+            <h1 className="text-white mt-4 text-xl font-semibold">Your Email</h1>
             <input
               type="email"
               name="email"
@@ -43,7 +50,7 @@ function Contact() {
               required
             />
 
-            <h1 className="text-white mt-4 text-xl font-semibold">Message for me</h1>
+            <h1 className="text-white mt-4 text-xl font-semibold">Message for Me</h1>
             <textarea
               name="message"
               placeholder="Drop a message for me"
@@ -54,7 +61,7 @@ function Contact() {
             <input
               type="submit"
               value="Connect ➤"
-              className="text-2xl cursor-pointer font-bold w-full text-center bg-[#24CFA6] py-2 rounded-xl"
+              className="text-2xl cursor-pointer font-bold w-full text-center bg-[#24CFA6] py-2 rounded-xl mt-4"
             />
           </form>
         </div>
