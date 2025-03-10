@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {motion} from 'framer-motion'
+import { FAQdata } from "../utils/faqData";
+
 
 function About() {
+  const [openIndex, setOpenIndex] = useState(0);
+  const handleOpen = (index) => {
+    setOpenIndex(index === openIndex ? null : index);
+  };
+
+
   return (
-    <div className='w-[100%] h-[100%] p-6 md:fixed bg-white '>
+    <div className='w-[100%] h-[100%] md:p-3 md:fixed bg-white '>
     <button onClick={()=> window.history.go(-1)} className='absolute backdrop-blur-lg top-6 right-6 hidden md:block text-white font-bold text-xl px-4 py-2 rounded-lg border-2 border-zinc-200' >← Back</button>
      <div className='min-h-[92vh] w-full  bg-black rounded-xl text-white flex flex-col md:flex-row '>
      <div className='md:w-[55%] p-4'>
@@ -36,8 +44,33 @@ function About() {
 
 
 
-      <div className='w-full md:w-[45%]'>     
-        <motion.img  initial={{x:"100%"}} animate={{x:'0%'}} transition={{ease:'linear', duration:0.8}} src='/Profile.png' alt='ProfileImage' className='w-full h-full object-cover rounded-xl' />
+      <div className='w-full md:w-[45%] mt-24 mr-2 md:mt-52'>     
+      <div className="space-y-4 p-2">
+          {FAQdata.map((item, index) => (
+            <div
+              key={index}
+              onClick={() => handleOpen(index)}
+              className=" border border-green-100 bg-white rounded-lg p-4 w-full cursor-pointer transition-all duration-300 shadow-md hover:shadow-lg "
+            >
+              {/* FAQ Title */}
+              <div className="flex justify-between items-center ">
+                <h1 className="text-sm md:text-lg font-semibold text-gray-800">
+                  {item.title}
+                </h1>
+                <span className="text-2xl font-bold text-[#056608]">
+                  {openIndex === index ? "–" : "+"}
+                </span>
+              </div>
+
+              {/* FAQ Description */}
+              {openIndex === index && (
+                <p className="mt-2 text-gray-700 text-sm md:text-base leading-relaxed ">
+                  {item.description}
+                </p>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
      </div>
       
