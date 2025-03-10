@@ -27,18 +27,20 @@ function Navbar({ openPanel, setOpenpanel }) {
           About me
         </NavLink>
         <NavLink
-  to="/Anandjharesume.pdf" // Replace "AnandResume1.pdf" with your actual filename
+  to="/AnandJhaResume.pdf" // Replace "AnandResume1.pdf" with your actual filename
   target="_blank"
   rel="noopener noreferrer"
-  className="text-2xl font-semibold cursor-pointer bg-[#27DFB3] px-5 py-6 mt-[-10px] animate-bounce duration-500 flex items-center rounded-lg"
+  className="text-2xl  font-semibold cursor-pointer bg-[#27DFB3] px-5 py-6 mt-[-10px] animate-bounce duration-500 flex items-center rounded-lg"
 >
   Get Resume
 </NavLink>
 
+
       </div>
 
       <div className="w-[20%] h-full px-20 py-6 ">
-        <NavLink to='/contact' className="hidden md:flex text-2xl font-bold cursor-pointer ml-20 ">
+        
+      <NavLink to='/contact' className="hidden md:flex  text-2xl font-semibold cursor-pointer bg-[#27DFB3] px-5 py-2 mt-[-10px] animate-bounce duration-500 items-center rounded-lg">
           Contact
         </NavLink>
 
@@ -96,11 +98,11 @@ function Navbar({ openPanel, setOpenpanel }) {
           <NavLink to='/about' onClick={()=>setOpenpanel(prev => !prev)} className="text-[10vw] block font-bold text-white cursor-pointer ">
             About Me
           </NavLink>
-          <NavLink to='/contact' onClick={()=>setOpenpanel(prev => !prev)} className="text-[10vw] font-bold text-white cursor-pointer ">
+          <NavLink to='/contact' onClick={()=>setOpenpanel(prev => !prev)} className="text-2xl font-semibold cursor-pointer mb-5 bg-[#27DFB3] px-5 py-3 mt-[-5px] flex items-center text-black rounded-lg">
             Contact
           </NavLink>
           <NavLink onClick={()=>setOpenpanel(prev => !prev)} 
-  to="/Anandjharesume.pdf" // Replace "AnandResume1.pdf" with your actual filename
+  to="/AnandJhaResume.pdf" // Replace "AnandResume1.pdf" with your actual filename
   target="_blank"
   rel="noopener noreferrer"
   className="text-2xl font-semibold cursor-pointer bg-[#27DFB3] px-5 py-3 mt-[-5px] flex items-center text-black rounded-lg"

@@ -37,6 +37,7 @@ function About() {
               <h2 className='text-black text-lg font-semibold ml-2'>Pursuing</h2>
               <h2 className='text-black text-lg font-semibold ml-2'>AISECT University </h2>
             </div>
+             
           </div>
 
        

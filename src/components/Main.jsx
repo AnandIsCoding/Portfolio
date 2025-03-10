@@ -72,7 +72,11 @@ function Main({ openPanel, setOpenpanel }) {
           <h1 className='text-white bg-[red] text-2xl font-bold'>A</h1>
           <h1 className='text-white bg-[red] text-2xl font-bold'>D</h1>
         </div>
+
+       
       </div>
+
+
 
       <div className={`w-full h-[1px] bg-zinc-400 mt-[47vw] md:mt-14`}></div>
       <div className='w-full flex flex-col md:justify-between md:flex md:flex-row px-4 md:px-8 py-8 text-xl font-thin'>
@@ -82,9 +86,12 @@ function Main({ openPanel, setOpenpanel }) {
         <NavLink onClick={()=>navigate('/contact')} className='px-4 py-2 cursor-pointer rounded-full border-2 border-zinc-400 mt-4 md:mt-[-1vw] flex gap-4 uppercase'>
         Lets get to it together <GoArrowUpRight className='mt-1 bg-zinc-100 rounded-full' />
         </NavLink>
+
+        
       </div>
 
       <div className='w-full h-full absolute overflow-x-hidden top-0'>
+      
         {images.map((item, index) => {
           return item.isActive && (
             <img

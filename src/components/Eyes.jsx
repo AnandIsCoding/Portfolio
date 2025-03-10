@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 
+
 function Eyes() {
     const [rotatevalue, setRotatevalue] = useState(0)
    
@@ -18,9 +19,11 @@ function Eyes() {
     },)
   return (
     <div  className="eyes w-full px-2 md:px-0  h-screen overflow-hidden mt-[-37vw] md:mt-0 ">
+         
       <div className='relative w-full h-full bg-cover bg-center bg-[url("/image.jpg")]'>
         <div className="absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%]   flex gap-10">
-
+ 
+ 
 
           <div className="w-[35vw] h-[35vw] md:w-[18vw] md:h-[18vw] flex justify-center items-center rounded-full bg-white ">
             <div className="w-[60%] h-[60%] rounded-full bg-black relative ">

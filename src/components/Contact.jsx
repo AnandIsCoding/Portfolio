@@ -14,10 +14,10 @@ const ContactForm = () => {
 
     emailjs
       .sendForm(
-        "service_ff4q4dw", // Your Service ID
-        "template_2szwrw8", // Your Template ID
+        "service_ff4q4dw", // My Service ID
+        "template_2szwrw8", // My Template ID
         form.current,
-        "qnuTCd0q0Aa7UyIiC" // Your Public Key
+        "qnuTCd0q0Aa7UyIiC" // My Public Key
       )
       .then(
         (result) => {
@@ -48,13 +48,14 @@ const ContactForm = () => {
         and I’ll get back to you as soon as possible!
       </p>
       <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-5">
-        <input
-          type="text"
-          name="user_name"
-          placeholder="Your Name"
-          required
-          className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-        />
+      <input
+  type="text"
+  name="from_name" // ✅ Matches EmailJS variable
+  placeholder="Your Name"
+  required
+  className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+/>
+
         <input
           type="email"
           name="user_email"

@@ -29,15 +29,25 @@ function Footer() {
        <NavLink to='/contact'  className='font-semibold text-xl md:text-2xl' >Contact me</NavLink>
        <NavLink to='https://github.com/AnandIsCoding' target="_blank" className='font-semibold text-xl' >Github </NavLink>
         <a href='https://www.linkedin.com/in/anandjha123' target="_blank" className='font-semibold text-xl' >Linkdein</a>
+        <NavLink to='/contact' className="hidden md:flex  text-2xl font-semibold cursor-pointer bg-[#27DFB3] px-5 py-2  items-center rounded-lg">
+                  Give a message
+                </NavLink>
+
        
         
        </div>
         
        </div>
 
+       
+
        <h1 className='text-[15vw] font-semibold uppercase  md:hidden mt-[40vw]'>Thanks🌿</h1>
 
-        <h1 className=' text-lg ml-[-5vw] md:ml-0 md:text-3xl  md:mt-[30%] font-bold'>Designed and built with ❤️ by Anand Jha</h1>
+       <NavLink to='/contact' className=" w-full py-5 px-8  md:hidden  text-2xl font-semibold cursor-pointer bg-[#27DFB3] items-center rounded-lg">
+                  Give a message
+                </NavLink>
+
+        <h1 className=' text-lg ml-[-5vw] md:ml-0 md:text-3xl  md:mt-[30%] mt-10 font-bold'>Designed and built with ❤️ by Anand Jha</h1>
        </div>
     </div>
   )

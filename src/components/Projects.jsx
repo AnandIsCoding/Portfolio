@@ -8,6 +8,7 @@ function Projects() {
   return (
     <div  className='w-full py-10 flex-wrap'  id="projects"> 
       <div className='w-full px-02 border-b-[1px] border-zinc-400 pb-10'>
+      
         <h1 className='text-4xl md:text-7xl' >Featured Projects</h1>        
       </div>
 
