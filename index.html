@@ -3,8 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="https://res.cloudinary.com/dm0rlehq8/image/upload/v1730121230/photogram/oa95iegk05j6jewhhgat.jpg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"  />
     <title>Anand jha</title>
+     <!-- Stop zoom via trackpad mousepad -->
+     <script>
+      document.addEventListener("wheel", function(event) {
+        if (event.ctrlKey || event.metaKey) { 
+          event.preventDefault();
+        }
+      }, { passive: false });
+    </script>
   </head>
   <body>
     <div id="root"></div>
