@@ -29,8 +29,9 @@ function App() {
        <Main openPanel={openPanel} setOpenpanel={setOpenpanel}/>
        <Slider/>
       
-       <Eyes/>
+       
        <Projects/>
+       <Eyes/>
        <Scrolling/>
        
      </>}/>
