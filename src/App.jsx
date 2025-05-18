@@ -10,6 +10,7 @@ import { Routes,Route } from 'react-router-dom'
 import Contact from './components/Contact';
 import Slider from './components/Slider'
 import About from './components/About';
+import ScrollToTop from './components/ScrollToTop'
 
 
 
@@ -21,8 +22,10 @@ function App() {
  
   return (
    <div className='bg-gray-100 select-none overflow-x-hidden'>
+   <ScrollToTop/>
+   <Navbar openPanel={openPanel} setOpenpanel={setOpenpanel} />
        <Routes>
-        <Route path='/' element={<><Navbar openPanel={openPanel} setOpenpanel={setOpenpanel} />
+        <Route path='/' element={<>
        <Main openPanel={openPanel} setOpenpanel={setOpenpanel}/>
        <Slider/>
       
@@ -30,11 +33,12 @@ function App() {
        <Projects/>
        <Scrolling/>
        
-       <Footer/></>}/>
+     </>}/>
 
        <Route path='/contact' element={<Contact/>} />
        <Route path='/about' element={<About/>} />
        </Routes>
+         <Footer/>
    </div>
   )
 }

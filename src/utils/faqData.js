@@ -2,31 +2,37 @@ export const FAQdata = [
   {
     title: "Who am I?",
     description:
-      "I am a passionate full-stack developer specializing in the MERN stack. I have built multiple projects, including a doctor appointment booking system, a dating platform like Tinder, and a real-time chat application. I am a BCA graduate with an 8.91 CGPA and currently pursuing an MCA.",
+      "I’m Anand Kumar Jha, currently pursuing an MCA from AISECT University, Hazaribagh, and a Master’s in Cloud Computing through AlmaBetter and Woolf University. I previously completed my BCA from Aryabhatta Knowledge University, Patna, with a CGPA of 8.91. My academic journey reflects a strong commitment to technology, problem-solving, and continuous learning.",
+    tooltip: "MCA + Cloud Computing + BCA with strong academic foundation",
   },
   {
     title: "What technologies do I work with?",
     description:
-      "I have expertise in MongoDB, Express.js, React.js, and Node.js (MERN stack). Additionally, I have experience with Tailwind CSS, Cloudinary, Git, REST APIs, authentication, and backend security. I also write detailed documentation for projects.",
+      "I specialize in the MERN stack—MongoDB, Express.js, React.js, and Node.js—along with Tailwind CSS for modern UI design, Cloudinary for media management, and Git for version control. I have experience with building RESTful APIs, implementing JWT and OTP-based authentication, securing backends, and writing well-structured documentation.",
+    tooltip: "MERN stack developer with real-world full-stack skills",
   },
   {
-    title: "What projects have I built?",
+    title: "What kind of projects have I built?",
     description:
-      "I have developed a doctor appointment booking system, a dating platform similar to Tinder, a real-time chat app, an LMS (Learning Management System), and other full-stack applications. My projects focus on performance, scalability, and real-world problem-solving.",
+      "My project portfolio includes a Doctor Appointment System, a Real-Time Chat App, a Dating App, an E-Commerce platform, and a comprehensive Learning Management System. These projects focus on real-world functionality, clean and modular architecture, robust authentication systems, and seamless UI/UX experiences. I emphasize scalable backend logic and smooth deployment.",
+    tooltip: "Real-world full-stack projects solving practical problems",
   },
   {
-    title: "Do I have professional training?",
+    title: "Have I worked under pressure or tight deadlines?",
     description:
-      "Yes, I have completed training from AlmaBetter, where I mastered advanced JavaScript, React, Node.js, and backend development concepts. I also have hands-on experience working with real-world projects and deployment strategies.",
+      "Yes. During my AlmaBetter training, I built a complete full-stack application within 3 days—covering everything from designing the UI to backend development and deployment. In my BCA final semester, I led a capstone LMS project, managing teammates, debugging cloud upload issues, and ensuring a successful delivery on time.",
+    tooltip: "Proven ability to deliver under pressure and lead teams",
   },
   {
-    title: "Can I contribute to open-source projects?",
+    title: "Why should you hire me?",
     description:
-      "Absolutely! I actively contribute to open-source projects, collaborate on GitHub, and help other developers in the community. I am always looking for opportunities to contribute and improve my skills.",
+      "I bring a solid foundation in software development, hands-on project experience, and dual postgraduate education in Computer Applications and Cloud Computing. I'm a fast learner, a problem-solver, and a disciplined team player. My code is clean, my architecture is scalable, and I’m deeply committed to building meaningful technology.",
+    tooltip: "Smart, skilled, and ready to contribute from day one",
   },
   {
     title: "How can you contact me?",
     description:
-      "You can reach out to me via email, LinkedIn, or GitHub. I am always open to collaboration, freelancing opportunities, and tech discussions.",
+      "Feel free to connect with me via Portfolio contact option, LinkedIn, GitHub, or email. I’m open to freelance work, full-time roles, collaborations, or tech-driven conversations. Let’s build something impactful together.",
+    tooltip: "Let’s connect for work or collaboration",
   },
 ];

@@ -27,7 +27,7 @@ function Navbar({ openPanel, setOpenpanel }) {
           About me
         </NavLink>
         <NavLink
-  to="/AnandJhaResume.pdf" // Replace "AnandResume1.pdf" with your actual filename
+  to="/Anandjharesume.pdf" // Replace "AnandResume1.pdf" with your actual filename
   target="_blank"
   rel="noopener noreferrer"
   className="text-2xl  font-semibold cursor-pointer bg-[#27DFB3] px-5 py-6 mt-[-10px] animate-bounce duration-500 flex items-center rounded-lg"
@@ -102,7 +102,7 @@ function Navbar({ openPanel, setOpenpanel }) {
             Contact
           </NavLink>
           <NavLink onClick={()=>setOpenpanel(prev => !prev)} 
-  to="/AnandJhaResume.pdf" // Replace "AnandResume1.pdf" with your actual filename
+  to="/Anandjharesume.pdf"
   target="_blank"
   rel="noopener noreferrer"
   className="text-2xl font-semibold cursor-pointer bg-[#27DFB3] px-5 py-3 mt-[-5px] flex items-center text-black rounded-lg"
@@ -120,7 +120,7 @@ function Navbar({ openPanel, setOpenpanel }) {
               Github
             </NavLink>
             
-            <a onClick={()=>setOpenpanel(prev => !prev)} href='www.linkedin.com/in/anandjha123' target="_blank" className="text-[7vw] font-bold text-white cursor-pointer ">
+            <a onClick={()=>setOpenpanel(prev => !prev)} href='www.linkedin.com/in/anandjhaji' target="_blank" className="text-[7vw] font-bold text-white cursor-pointer ">
               Linkdeln
             </a>
             
