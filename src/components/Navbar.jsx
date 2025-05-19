@@ -116,7 +116,7 @@ function Navbar({ openPanel, setOpenpanel }) {
             <h1 className="text-[4vw] underline font-bold text-white cursor-pointer ">
               Socials
             </h1>
-            <NavLink onClick={()=>setOpenpanel(prev => !prev)} to='https://github.com/AnandIsCoding' target='_blank' className="text-[7vw] font-bold text-white cursor-pointer ">
+            <NavLink onClick={()=>setOpenpanel(prev => !prev)} to='https://github.com/AnandIsCoding'  target='_blank' className="text-[7vw] font-bold text-white cursor-pointer ">
               Github
             </NavLink>
             

@@ -18,12 +18,6 @@ export const FAQdata = [
     tooltip: "Real-world full-stack projects solving practical problems",
   },
   {
-    title: "Have I worked under pressure or tight deadlines?",
-    description:
-      "Yes. During my AlmaBetter training, I built a complete full-stack application within 3 days—covering everything from designing the UI to backend development and deployment. In my BCA final semester, I led a capstone LMS project, managing teammates, debugging cloud upload issues, and ensuring a successful delivery on time.",
-    tooltip: "Proven ability to deliver under pressure and lead teams",
-  },
-  {
     title: "Why should you hire me?",
     description:
       "I bring a solid foundation in software development, hands-on project experience, and dual postgraduate education in Computer Applications and Cloud Computing. I'm a fast learner, a problem-solver, and a disciplined team player. My code is clean, my architecture is scalable, and I’m deeply committed to building meaningful technology.",

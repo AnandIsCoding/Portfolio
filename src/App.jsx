@@ -11,6 +11,7 @@ import Contact from './components/Contact';
 import Slider from './components/Slider'
 import About from './components/About';
 import ScrollToTop from './components/ScrollToTop'
+import MobileOptions from './components/MobileOptions'
 
 
 
@@ -40,6 +41,7 @@ function App() {
        <Route path='/about' element={<About/>} />
        </Routes>
          <Footer/>
+         <MobileOptions/>
    </div>
   )
 }

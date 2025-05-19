@@ -44,8 +44,8 @@ function About() {
                 />
                 <div className="p-4">
                   <h3 className="text-xl font-semibold">BCA Graduate</h3>
-                  <p className="text-sm text-gray-600">CGPA: 8.919</p>
-                  <p className="text-sm text-gray-500">Vidya Vihar Institute of Technology</p>
+                  <p className="text-sm text-gray-600">CGPA: 8.91</p>
+                  <p className="text-sm text-gray-500">Aryabhatta Knowledge University, Patna</p>
                 </div>
               </motion.div>
 
@@ -79,7 +79,7 @@ function About() {
               />
               <div className="p-4">
                 <h3 className="text-xl font-semibold">Masters in Cloud Computing</h3>
-                <p className="text-sm text-gray-600">Woolf University</p>
+                <p className="text-sm text-gray-600">Woolf University \/\/</p>
                 <p className="text-sm text-gray-500">Specialized in modern cloud technologies</p>
               </div>
             </motion.div>
@@ -93,14 +93,14 @@ function About() {
           transition={{ duration: 0.7 }}
           className="space-y-6"
         >
-          <h2 className="text-3xl font-bold text-gray-900">Frequently Asked Questions</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mt-0 md:mt-24">Frequently Asked Questions</h2>
           <div className="space-y-4">
             {FAQdata.map((item, index) => (
               <motion.div
                 key={index}
                 whileHover={{ scale: 1.01 }}
                 onClick={() => handleOpen(index)}
-                className="bg-gray-50 rounded-lg p-5 cursor-pointer shadow transition-all duration-300 hover:bg-gray-100"
+                className="bg-white rounded-lg p-5 cursor-pointer shadow transition-all duration-300 hover:bg-gray-50"
               >
                 <div className="flex justify-between items-center">
                   <h3 className="text-lg font-semibold text-gray-900">{item.title}</h3>

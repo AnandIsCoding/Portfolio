@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { GoArrowUpRight } from "react-icons/go";
 import { useScroll } from 'framer-motion';
 import { Navigate, NavLink, useNavigate } from 'react-router-dom';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 function Main({ openPanel, setOpenpanel }) {
   const navigate = useNavigate()
@@ -71,6 +72,24 @@ function Main({ openPanel, setOpenpanel }) {
           <h1 className='text-white bg-[red] text-2xl font-bold'>A</h1>
           <h1 className='text-white bg-[red] text-2xl font-bold'>A</h1>
           <h1 className='text-white bg-[red] text-2xl font-bold'>D</h1>
+          <div className=" bg-white border border-gray-300 shadow-lg rounded-lg p-1 flex flex-col gap-4 z-50 ">
+                      <a
+                        href="https://github.com/AnandIsCoding"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-black hover:text-violet-600 text-2xl"
+                      >
+                        <FaGithub />
+                      </a>
+                      <a
+                        href="https://www.linkedin.com/in/anandjhaji"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-700 hover:text-violet-600 text-2xl"
+                      >
+                        <FaLinkedin />
+                      </a>
+                    </div>
         </div>
 
        
@@ -90,7 +109,7 @@ function Main({ openPanel, setOpenpanel }) {
         
       </div>
 
-      <div className='w-full h-full absolute overflow-x-hidden top-0'>
+      <div className='w-full h-full absolute overflow-x-hidden top-0 z-999'>
       
         {images.map((item, index) => {
           return item.isActive && (
@@ -98,7 +117,7 @@ function Main({ openPanel, setOpenpanel }) {
               key={index}
               src={item.url}
               alt='images'
-              className='w-36 duration-150 absolute rounded-lg'
+              className='w-36 duration-150 absolute rounded-lg z-999'
               style={{ top: item.top, left: item.left }}
             />
           );
