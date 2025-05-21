@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import { IoHomeOutline } from "react-icons/io5";
 import { BsPerson } from "react-icons/bs";
-import { MdOutlineWork } from "react-icons/md";
 import { RiContactsLine } from "react-icons/ri";
-import { PiScrollDuotone } from "react-icons/pi";
+
 import { IoShareSocialSharp } from "react-icons/io5";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { scroller } from "react-scroll";
+import { PiReadCvLogo } from "react-icons/pi";
+import { GiSkills } from "react-icons/gi";
+
 
 function MobileOptions() {
   const navigate = useNavigate();
@@ -41,18 +43,19 @@ function MobileOptions() {
         onClick={() => scrollTo("skills")}
         className="flex flex-col items-center justify-center text-black cursor-pointer hover:text-violet-600 active:scale-95 transition-transform duration-150"
       >
-        <MdOutlineWork className="text-2xl sm:text-3xl" />
+        <GiSkills className="text-2xl sm:text-3xl" />
         <span className="mt-1 text-xs font-medium">Skills</span>
       </div>
 
       {/* Projects */}
-      <div
-        onClick={() => scrollTo("projects")}
+      <NavLink
+      target="_blank"
+      to="/AnandJhaResume.pdf"
         className="flex flex-col items-center justify-center text-black cursor-pointer hover:text-violet-600 active:scale-95 transition-transform duration-150"
       >
-        <PiScrollDuotone className="text-2xl sm:text-3xl" />
-        <span className="mt-1 text-xs font-medium">Projects</span>
-      </div>
+        <PiReadCvLogo className="text-2xl sm:text-3xl" />
+        <span className="mt-1 text-xs font-medium">Resume</span>
+      </NavLink>
 
       {/* About */}
       <NavLink
