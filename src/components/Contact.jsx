@@ -42,7 +42,7 @@ const ContactForm = () => {
       exit={{ opacity: 0, y: -40 }}
       className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 px-4"
     >
-      <div className="backdrop-blur-md bg-white/70 shadow-xl rounded-2xl w-full max-w-lg p-8">
+      <div className="backdrop-blur-md bg-white/70 shadow-xl rounded-2xl w-full max-w-lg p-4 md:p-8">
         <h2 className="text-4xl font-bold text-center text-gray-800 mb-2">Get in Touch</h2>
         <p className="text-center text-gray-600 mb-6 text-sm">
           Have a project or a question? Drop a message and I'll get back to you!

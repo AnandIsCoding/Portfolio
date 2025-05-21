@@ -79,7 +79,7 @@ function About() {
               />
               <div className="p-4">
                 <h3 className="text-xl font-semibold">Masters in Cloud Computing</h3>
-                <p className="text-sm text-gray-600">Woolf University \/\/</p>
+                <p className="text-sm text-gray-600">Woolf University  \ ^ /</p>
                 <p className="text-sm text-gray-500">Specialized in modern cloud technologies</p>
               </div>
             </motion.div>
