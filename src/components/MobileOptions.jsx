@@ -1,106 +1,124 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { IoHomeOutline } from "react-icons/io5";
 import { BsPerson } from "react-icons/bs";
 import { RiContactsLine } from "react-icons/ri";
-
 import { IoShareSocialSharp } from "react-icons/io5";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import { scroller } from "react-scroll";
 import { PiReadCvLogo } from "react-icons/pi";
 import { GiSkills } from "react-icons/gi";
 
-
 function MobileOptions() {
   const navigate = useNavigate();
+  const location = useLocation();
+  const isHome = location.pathname === "/";
   const [showSocial, setShowSocial] = useState(false);
 
-  // Scroll helper
-  const scrollTo = (target) => {
-    scroller.scrollTo(target, {
-      duration: 800,
-      delay: 0,
-      smooth: "easeInOutQuart",
-    });
+  useEffect(() => {
+    const section = sessionStorage.getItem("scrollTo");
+    if (isHome && section) {
+      scroller.scrollTo(section, {
+        duration: 600,
+        delay: 0,
+        smooth: "easeInOutQuart",
+      });
+      sessionStorage.removeItem("scrollTo");
+    }
+  }, [location.pathname]);
+
+  const handleScrollOrRedirect = (section) => {
+    if (isHome) {
+      scroller.scrollTo(section, {
+        duration: 600,
+        delay: 0,
+        smooth: "easeInOutQuart",
+      });
+    } else {
+      sessionStorage.setItem("scrollTo", section);
+      navigate("/");
+    }
   };
 
+  const iconSize = 28;
+  const activeColor = "text-violet-600";
+
   return (
-    <div className="fixed md:hidden bottom-0 left-0 right-0 bg-white border-t border-gray-400 shadow-md z-50 flex justify-around items-center py-2 sm:py-3 text-sm sm:text-sm z-999">
-      {/* Home */}
+    <div className="fixed md:hidden bottom-0 left-0 right-0 bg-white rounded-t-xl border-t border-gray-300 shadow-lg z-50 p-2 flex justify-around items-center">
+      {/** Home */}
       <div
         onClick={() => {
-          window.scrollTo({ top: 0, behavior: "smooth" });
           navigate("/");
+          window.scrollTo({ top: 0, behavior: "smooth" });
         }}
-        className="flex flex-col items-center justify-center text-black cursor-pointer hover:text-violet-600 active:scale-95 transition-transform duration-150"
+        className="flex flex-col items-center justify-center text-gray-700 hover:scale-110 transition transform duration-150 cursor-pointer"
       >
-        <IoHomeOutline className="text-2xl sm:text-3xl" />
+        <IoHomeOutline className={`text-${iconSize}`} />
         <span className="mt-1 text-xs font-medium">Home</span>
       </div>
 
-      {/* Skills */}
+      {/** Skills */}
       <div
-        onClick={() => scrollTo("skills")}
-        className="flex flex-col items-center justify-center text-black cursor-pointer hover:text-violet-600 active:scale-95 transition-transform duration-150"
+        onClick={() => handleScrollOrRedirect("skills")}
+        className="flex flex-col items-center justify-center text-gray-700 hover:scale-110 transition transform duration-150 cursor-pointer"
       >
-        <GiSkills className="text-2xl sm:text-3xl" />
+        <GiSkills className={`text-${iconSize}`} />
         <span className="mt-1 text-xs font-medium">Skills</span>
       </div>
 
-      {/* Projects */}
+      {/** Resume */}
       <NavLink
-      target="_blank"
-      to="/AnandJhaResume.pdf"
-        className="flex flex-col items-center justify-center text-black cursor-pointer hover:text-violet-600 active:scale-95 transition-transform duration-150"
+        to="/AnandJhaResume.pdf"
+        target="_blank"
+        className="flex flex-col items-center justify-center text-gray-700 hover:scale-110 transition transform duration-150"
       >
-        <PiReadCvLogo className="text-2xl sm:text-3xl" />
+        <PiReadCvLogo className={`text-${iconSize}`} />
         <span className="mt-1 text-xs font-medium">Resume</span>
       </NavLink>
 
-      {/* About */}
+      {/** About */}
       <NavLink
         to="/about"
-        className="flex flex-col items-center justify-center  text-black cursor-pointer hover:text-violet-600 active:scale-95 transition-transform duration-150"
+        className="flex flex-col items-center justify-center text-gray-700 hover:scale-110 transition transform duration-150"
       >
-        <BsPerson className="text-2xl sm:text-3xl" />
+        <BsPerson className={`text-${iconSize}`} />
         <span className="mt-1 text-xs font-medium">About</span>
       </NavLink>
 
-      {/* Contact */}
+      {/** Contact */}
       <NavLink
         to="/contact"
-        className="flex flex-col items-center justify-center text-black cursor-pointer hover:text-violet-600 active:scale-95 transition-transform duration-150"
+        className="flex flex-col items-center justify-center text-gray-700 hover:scale-110 transition transform duration-150"
       >
-        <RiContactsLine className="text-2xl sm:text-3xl" />
+        <RiContactsLine className={`text-${iconSize}`} />
         <span className="mt-1 text-xs font-medium">Contact</span>
       </NavLink>
 
-      {/* Social Toggle Button */}
+      {/** Social */}
       <div className="relative">
         <div
           onClick={() => setShowSocial(!showSocial)}
-          className="flex flex-col items-center justify-center text-black cursor-pointer hover:text-violet-600 active:scale-95 transition-transform duration-150"
+          className="flex flex-col items-center justify-center text-gray-700 hover:scale-110 transition transform duration-150 cursor-pointer"
         >
-          <IoShareSocialSharp className="text-2xl sm:text-3xl" />
+          <IoShareSocialSharp className={`text-${iconSize}`} />
           <span className="mt-1 text-xs font-medium">Social</span>
         </div>
 
-        {/* Social Links Dropdown */}
         {showSocial && (
-          <div className="absolute bottom-14 left-1/2 transform -translate-x-1/2 bg-white border border-gray-300 shadow-lg rounded-lg p-2 flex gap-4 z-50">
+          <div className="absolute bottom-14  -translate-x-1/2 bg-white border border-gray-200 shadow-lg rounded-md p-2 flex gap-3">
             <a
               href="https://github.com/AnandIsCoding"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-black hover:text-violet-600 text-xl"
+              className="text-gray-700 hover:text-black text-4xl"
             >
               <FaGithub />
             </a>
             <a
-              href="https://www.linkedin.com/in/anandjhaji"
+              href="https://linkedin.com/in/anandjhaji"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-700 hover:text-violet-600 text-xl"
+              className="text-blue-600 hover:text-blue-800 text-4xl"
             >
               <FaLinkedin />
             </a>

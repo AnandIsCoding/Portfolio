@@ -11,7 +11,7 @@ function Main({ openPanel, setOpenpanel }) {
     { url: 'https://res.cloudinary.com/dm0rlehq8/image/upload/v1734635541/Tinder/jonmvwzqgpscaw1lazgz.jpg', top: '28%', left: '60%', isActive: false },
     // { url: 'https://cdn.prod.website-files.com/664dc8b6bc52b504509197f0/66b1608a4f57abd6f4bb1b06_cover-home-p-500.webp', top: '32%', left: '60%', isActive: false },
     { url: 'https://res.cloudinary.com/dm0rlehq8/image/upload/v1734635541/Tinder/jonmvwzqgpscaw1lazgz.jpg', top: '20%', left: '50%', isActive: false },
-    { url: 'https://res.cloudinary.com/dm0rlehq8/image/upload/v1734635541/Tinder/jonmvwzqgpscaw1lazgz.jpg', top: '35%', left: '70%', isActive: false },
+    { url: 'https://res.cloudinary.com/dm0rlehq8/image/upload/v1734635541/Tinder/jonmvwzqgpscaw1lazgz.jpg', top: '45%', left: '70%', isActive: false },
   ]);
 
   const { scrollYProgress } = useScroll();

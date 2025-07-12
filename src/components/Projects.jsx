@@ -1,205 +1,189 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { ImGithub } from "react-icons/im";
 import { motion } from "framer-motion";
+import { ImGithub } from "react-icons/im";
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 50 },
+const projects = [
+  {
+    title: "DevLinked – Social Media App",
+    description:
+      "A full-stack professional networking site with real-time chat, notifications, and cloud integration.",
+    tech: [
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Socket.IO",
+      "Cloudinary",
+      "AWS",
+      "GoDaddy",
+    ],
+    liveLink: "https://devlinked.site",
+    githubLink:
+      "https://github.com/AnandIsCoding/Professional-Networking-System",
+    imagesMobile: [
+      "/devlinked_mobile1.png",
+      "/devlinked_mobile2.png",
+      "/devlinked_mobile3.png",
+    ],
+    imagesDesktop: [
+      "/devlinked_mobile1.png",
+      "/devlinked_mobile2.png",
+      "/devlinked_mobile3.png",
+    ],
+    bgImage:
+      "https://cdn.dribbble.com/userupload/44062340/file/original-5c090a6bafb14b80efdeedb55d9e2de9.jpeg?resize=1504x1003&vertical=center",
+  },
+  {
+    title: "DocHealth – Doctor Appointment Booking System",
+    description: "Doctor appointment system with dashboards, scheduling.",
+    tech: ["React", "Node.js", "Express", "MongoDB", "jwt", "Render"],
+    liveLink: "https://dochealth.onrender.com/",
+    githubLink:
+      "https://github.com/AnandIsCoding/Doctor-Appointment-Booking-System",
+    imagesMobile: ["/Dashboard1.png", "/Dashboard2.png", "/DoctorPage1.png"],
+    imagesDesktop: ["/Dashboard1.png", "/Dashboard2.png", "/DoctorPage1.png"],
+    bgImage:
+      "https://cdn.dribbble.com/userupload/15630357/file/original-04683117fdc77f8bc7cfde1281da6717.jpg?resize=1504x1128&vertical=center", // example
+  },
+  {
+    title: "ShopClues – E-Commerce Clone",
+    description:
+      "A complete shopping website with user auth, cart, and responsive design.",
+    tech: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "jwt",
+      "Tailwind",
+      "Firebase",
+      "Render",
+    ],
+    liveLink: "https://myshopcluess.web.app",
+    githubLink: "https://github.com/AnandIsCoding/FullStack-ShopClues",
+    imagesMobile: ["/HomeMobile1.png", "/Product3.png", "/Product4.png"],
+    imagesDesktop: ["/HomeMobile1.png", "/Product3.png", "/Product4.png"],
+    bgImage:
+      "https://cdn.dribbble.com/userupload/15276181/file/original-a0f07373298e7c47fea247931c8b1684.jpg?resize=1504x1592&vertical=center", // example
+  },
+  {
+    title: "Tinder Replica – Dating App",
+    description:
+      "Swipe-based dating platform with matching, options, and basic chat interface.",
+    tech: ["React", "Node.js", "MongoDB", "Express.js"],
+    liveLink: "https://lovefinder.onrender.com",
+    githubLink: "https://github.com/AnandIsCoding/Tinder-Replica",
+    imagesMobile: [
+      "/tinderSignup.png",
+      "/tinderFeed.png",
+      "/tinderOptions.png",
+    ],
+    imagesDesktop: [
+      "/tinderSignup.png",
+      "/tinderFeed.png",
+      "/tinderOptions.png",
+    ],
+    bgImage:
+      "https://cdn.dribbble.com/userupload/16365106/file/original-971baeae128853b8185fc546fa611991.jpg?resize=1504x1504&vertical=center", // example
+  },
+];
+
+const fadeIn = {
+  hidden: { opacity: 0, y: 60 },
   visible: { opacity: 1, y: 0 },
 };
 
 function Projects() {
   return (
-    <div
-      className="w-full py-1 md:py-16 px-1 md:px-16 bg-gradient-to-b from-white to-zinc-100 mb-44 md:mb-0 "
+    <section
       id="projects"
+      className="bg-gradient-to-b  py-16 px-2 md:px-16 lg:px-24 text-gray-900"
     >
-      <div className="border-b border-zinc-400 pb-12">
-        <h1 className="text-4xl md:text-6xl font-bold text-center md:text-left">
-          🚀 Featured Projects
-        </h1>
+      <div className="text-center mb-16">
+        <h2 className="text-4xl md:text-5xl font-bold">🚀 Featured Projects</h2>
+        <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+          Full-stack applications showcasing real-time features, responsive
+          design, and clean UI.
+        </p>
       </div>
 
-      <div className="mt-16 flex flex-col gap-12">
-        {/* Project Card 1 */}
-        <motion.div
-          className="flex flex-col md:flex-row gap-8"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          variants={fadeUp}
-        >
-          <div className="w-full md:w-1/2 bg-violet-500 rounded-2xl p-1 py-2 md:p-4 shadow-xl hover:scale-[1.02] transition-transform duration-300">
-            <div className="flex h-72 md:h-[85%] gap-1 md:gap-2 overflow-hidden rounded-xl">
-              <img
-                src="/Dashboard1.png"
-                alt="Home Page 1"
-                className="w-1/3 object-cover rounded-xl"
-              />
-              <img
-                src="/Dashboard2.png"
-                alt="Product Page"
-                className="w-1/3 object-cover rounded-xl"
-              />
-              <img
-                src="/DoctorPage1.png"
-                alt="More Products"
-                className="w-1/3 object-cover rounded-xl"
-              />
-            </div>
-            <div className="flex gap-4 justify-center items-center pt-5 flex-wrap">
-              <NavLink
-                to="https://dochealth.onrender.com/"
-                target="_blank"
-                title="Live preview"
-                className="px-6 py-2 rounded-full bg-white font-semibold text-black hover:bg-black hover:text-white transition-colors"
-              >
-                Live Preview
-              </NavLink>
-              <NavLink
-                to="https://github.com/AnandIsCoding/Doctor-Appointment-Booking-System"
-                target="_blank"
-                title="Github Repository"
-                className="px-6 py-2 rounded-full bg-white font-semibold text-black hover:bg-black hover:text-white flex items-center gap-2 transition-colors"
-              >
-                <ImGithub size={20} />
-                Github
-              </NavLink>
-            </div>
-          </div>
+      <div className="grid gap-20">
+        {projects.map((proj, idx) => (
+          <motion.div
+            key={proj.title}
+            className="relative rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: idx * 0.15 }}
+            variants={fadeIn}
+          >
+            {/* ✅ Background Image with Overlay */}
+            <div
+              className="absolute inset-0 bg-cover bg-center"
+              style={{
+                backgroundImage: `url(${proj.bgImage})`,
+              }}
+            ></div>
 
-          {/* Project Card 2 */}
-          <div className="w-full md:w-1/2 bg-violet-500 rounded-2xl p-1 py-2 md:p-4  shadow-xl hover:scale-[1.02] transition-transform duration-300">
-            <div className="flex h-72 md:h-[85%] gap-1 md:gap-2 overflow-hidden rounded-xl">
-              <img
-                src="/HomeMobile1.png"
-                alt="Home Page 1"
-                className="w-1/3 object-cover rounded-xl"
-              />
-              <img
-                src="/Product3.png"
-                alt="Product Page"
-                className="w-1/3 object-cover rounded-xl"
-              />
-              <img
-                src="/Product4.png"
-                alt="More Products"
-                className="w-1/3 object-cover rounded-xl"
-              />
-            </div>
-            <div className="flex gap-4 justify-center items-center pt-5 flex-wrap">
-              <NavLink
-                to="https://myshopcluess.web.app"
-                target="_blank"
-                title="Live Preview"
-                className="px-6 py-2 rounded-full bg-white font-semibold text-black hover:bg-black hover:text-white transition-colors"
-              >
-                Live Preview
-              </NavLink>
-              <NavLink
-                to="https://github.com/AnandIsCoding/FullStack-ShopClues"
-                target="_blank"
-                title="GitHub Repository"
-                className="px-6 py-2 rounded-full bg-white font-semibold text-black hover:bg-black hover:text-white flex items-center gap-2 transition-colors"
-              >
-                <ImGithub size={20} />
-                GitHub
-              </NavLink>
-            </div>
-          </div>
-          
-        </motion.div>
+            {/* ✅ Dark translucent overlay for readability */}
+            <div className="absolute inset-0 bg-black bg-opacity-60"></div>
 
-        {/* Second Row of Projects */}
-        <motion.div
-          className="flex flex-col md:flex-row gap-8"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          variants={fadeUp}
-        >
-          {/* Project Card 3 */}
-          <div className="w-full md:w-1/2 bg-violet-500 rounded-2xl p-1 py-2 md:p-4  shadow-xl hover:scale-[1.02] transition-transform duration-300">
-            <div className="flex h-72 md:h-[85%] gap-1 md:gap-2 overflow-hidden rounded-xl">
-              <img
-                src="/tinderSignup.png"
-                alt="Signup"
-                className="w-1/3 object-cover rounded-xl"
-              />
-              <img
-                src="/tinderFeed.png"
-                alt="Feed"
-                className="w-1/3 object-cover rounded-xl"
-              />
-              <img
-                src="/tinderOptions.png"
-                alt="Options"
-                className="w-1/3 object-cover rounded-xl"
-              />
-            </div>
-            <div className="flex gap-4 justify-center items-center pt-5 flex-wrap">
-              <NavLink
-                to="https://lovefinder.onrender.com"
-                target="_blank"
-                title="Live preview"
-                className="px-6 py-2 rounded-full bg-white font-semibold text-black hover:bg-black hover:text-white transition-colors"
-              >
-                Live Preview
-              </NavLink>
-              <NavLink
-                to="https://github.com/AnandIsCoding/Tinder-Replica.git"
-                target="_blank"
-                title="Github Repository"
-                className="px-6 py-2 rounded-full bg-white font-semibold text-black hover:bg-black hover:text-white flex items-center gap-2 transition-colors"
-              >
-                <ImGithub size={20} />
-                Github
-              </NavLink>
-            </div>
-          </div>
+            {/* ✅ Foreground Content */}
+            <div className="relative z-10 flex flex-col lg:flex-row text-white p-4 lg:p-8">
+              {/* Left Side - Images */}
+              <div className="lg:w-1/2 w-full flex gap-2 ml-[-8px] md:ml-0 ">
+                
+                {proj.imagesMobile.map((img, i) => (
+                  <img
+                    key={i}
+                    src={img}
+                    alt={proj.title}
+                    className="block  w-1/3 object-cover rounded-lg"
+                  />
+                ))}
+              </div>
 
-          {/* Project Card 4 */}
-          <div className="w-full md:w-1/2 bg-violet-500 rounded-2xl p-1 py-2 md:p-4  shadow-xl hover:scale-[1.02] transition-transform duration-300">
-            <div className="flex h-72 md:h-[85%] bg-white rounded-xl overflow-hidden">
-              <img
-                src="/chatApp1.png"
-                alt="Chats"
-                className="w-[65%] object-cover"
-              />
-              <img
-                src="/chatApp2.png"
-                alt="Screen"
-                className="w-[35%] object-cover"
-              />
+              {/* Right Side - Details */}
+              <div className="lg:w-1/2 md:ml-4 w-full flex flex-col justify-center gap-4 mt-6 lg:mt-0 px-2 lg:px-6">
+                <h3 className="text-3xl font-bold text-cyan-400">
+                  {proj.title}
+                </h3>
+                <p className="text-white/90">{proj.description}</p>
+
+                <div className="flex flex-wrap gap-2 mt-2">
+                  {proj.tech.map((tech, i) => (
+                    <span
+                      key={i}
+                      className="bg-white/10 border border-white text-white text-xs px-3 py-1 rounded-full"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="flex gap-4 mt-4 flex-wrap">
+                  <NavLink
+                    to={proj.liveLink}
+                    target="_blank"
+                    className="bg-cyan-500 text-white px-5 py-2 rounded-full text-sm hover:bg-cyan-600 transition"
+                  >
+                    Live Preview
+                  </NavLink>
+                  <NavLink
+                    to={proj.githubLink}
+                    target="_blank"
+                    className="flex items-center gap-2 px-5 py-2 border border-white rounded-full text-sm text-white hover:bg-white/20 transition"
+                  >
+                    <ImGithub size={18} />
+                    GitHub
+                  </NavLink>
+                </div>
+              </div>
             </div>
-            <div className="flex gap-4 justify-center items-center pt-5 flex-wrap">
-              <button
-                title="Live preview"
-                onClick={() =>
-                  alert(
-                    "Chat Application is not deployed yet, sorry for the inconvenience"
-                  )
-                }
-                className="px-6 py-2 rounded-full bg-white font-semibold text-black hover:bg-black hover:text-white transition-colors"
-              >
-                Live Preview
-              </button>
-              <NavLink
-                to="https://github.com/AnandIsCoding/Full-Stack-Chat-Application"
-                target="_blank"
-                title="Live preview is not available"
-                className="px-6 py-2 rounded-full bg-white font-semibold text-black hover:bg-black hover:text-white flex items-center gap-2 transition-colors"
-              >
-                <ImGithub size={20} />
-                Github
-              </NavLink>
-            </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        ))}
       </div>
-    </div>
+    </section>
   );
 }
 
