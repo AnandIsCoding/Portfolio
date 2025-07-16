@@ -26,7 +26,7 @@ const projects = [
       "/devlinked_mobile3.png",
     ],
     bgImage:
-      "https://cdn.dribbble.com/userupload/44062340/file/original-5c090a6bafb14b80efdeedb55d9e2de9.jpeg?resize=1504x1003&vertical=center",
+      "https://cdn.dribbble.com/userupload/15630357/file/original-04683117fdc77f8bc7cfde1281da6717.jpg?resize=1504x1128&vertical=center",
   },
   {
     title: "DocHealth – Doctor Appointment Booking System",
@@ -37,7 +37,7 @@ const projects = [
       "https://github.com/AnandIsCoding/Doctor-Appointment-Booking-System",
     imagesMobile: ["/Dashboard1.png", "/Dashboard2.png", "/DoctorPage1.png"],
     bgImage:
-      "https://cdn.dribbble.com/userupload/15630357/file/original-04683117fdc77f8bc7cfde1281da6717.jpg?resize=1504x1128&vertical=center",
+      "https://cdn.dribbble.com/userupload/44062340/file/original-5c090a6bafb14b80efdeedb55d9e2de9.jpeg?resize=1504x1003&vertical=center",      
   },
   {
     title: "ShopClues – E-Commerce Clone",
