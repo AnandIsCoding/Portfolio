@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FAQdata } from '../utils/faqData';
+import CertificateCard from './CertificateCard';
 
 function About() {
   const [openIndex, setOpenIndex] = useState(null);
@@ -10,7 +11,7 @@ function About() {
   };
 
   return (
-    <div className="w-full min-h-screen bg-white text-gray-800 px-6  md:px-10 pt-32 pb-10">
+    <div className="w-full min-h-screen bg-white text-gray-800 px-2 md:px-10 pt-32 pb-10">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 ">
 
         {/* Left Section */}
@@ -116,6 +117,16 @@ function About() {
           </div>
         </motion.div>
       </div>
+       <section className="py-12">
+      <h2 className="text-2xl font-bold text-center mb-6">Certificate</h2>
+      <CertificateCard
+        title="Advanced Certification in Full Stack Web Development"
+        issuer="Indian Institute of Technology, Guwahati"
+        date="October 2024"
+        imageUrl="/IIT.png"
+        fileUrl="/IIT-Guwhati.pdf"
+      />
+    </section>
     </div>
   );
 }

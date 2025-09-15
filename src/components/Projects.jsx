@@ -7,7 +7,7 @@ const projects = [
   {
     title: "AI & Automation Playground – Live projects in Generative AI",
     description:
-      "AI Ticket System (Moderator assignment with skills requirement matching using AI + Gemini + Inngest) + Multi Tool AI platform + Feedback System Automation + Product Recommendation ",
+      "AI Ticket System (Moderator assignment with skills requirement matching using AI + Gemini + Inngest) + Multi Tool AI platform + Feedback System Automation + Portfolio contact form + Product Recommendation ",
     tech: [
       "n8n",
       "Inngest",

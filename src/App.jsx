@@ -12,6 +12,7 @@ import Slider from './components/Slider'
 import About from './components/About';
 import ScrollToTop from './components/ScrollToTop'
 import MobileOptions from './components/MobileOptions'
+import CertificateCard from './components/CertificateCard'
 
 
 
@@ -33,6 +34,16 @@ function App() {
        
        <Projects/>
        {/* <Eyes/> */}
+        <section className="py-12">
+      <h2 className="text-2xl font-bold text-center mb-6">Certificate</h2>
+      <CertificateCard
+        title="Advanced Certification in Full Stack Web Development"
+        issuer="Indian Institute of Technology, Guwahati"
+        date="October 2024"
+        imageUrl="/IIT.png"
+        fileUrl="/IIT-Guwhati.pdf"
+      />
+    </section>
        <Scrolling/>
        
      </>}/>
