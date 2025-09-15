@@ -1,41 +1,55 @@
 import React, { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
-import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import toast from "react-hot-toast";
 
 const ContactForm = () => {
   const form = useRef();
-  const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState(""); // to show success/error message
+  // console.log(import.meta.env.VITE_N8N_URL)
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
     setLoading(true);
+    setStatus("");
 
-    emailjs
-      .sendForm(
-        "service_ff4q4dw", // My Service ID
-        "template_2szwrw8", // My Template ID
-        form.current,
-        "qnuTCd0q0Aa7UyIiC" // My Public Key
-      )
-      .then(
-        (result) => {
-          console.log("Success:", result.text);
-          alert("Your message has been sent successfully! I'll get back to you soon.");
-          setLoading(false);
-          navigate("/");
-        },
-        (error) => {
-          console.log("Error:", error.text);
-          alert("Oops! Something went wrong. Please try again later.");
-          setLoading(false);
+    // Collect form data
+    const formData = new FormData(form.current);
+    const payload = {
+      from_name: formData.get("from_name"),
+      user_email: formData.get("user_email"),
+      message: formData.get("message"),
+    };
+
+    try {
+      const res = await fetch(
+        import.meta.env.VITE_N8N_URL,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(payload),
         }
       );
+
+      if (res.ok) {
+        setStatus("Message sent successfully!");
+        form.current.reset(); // clear form
+        toast.success('Anand Jha will contact you ASAP !!')
+      } else {
+        setStatus("Something went wrong. Please try again.");
+      }
+    } catch (err) {
+      console.error(err);
+      setStatus("Failed to send message.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, y: 80 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ type: "spring", stiffness: 100, damping: 18 }}
@@ -43,8 +57,11 @@ const ContactForm = () => {
       className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 px-4"
     >
       <div className="backdrop-blur-md bg-white/70 shadow-xl rounded-2xl w-full max-w-lg p-4 md:p-8">
-        <h2 className="text-4xl font-bold text-center text-gray-800 mb-2">Get in Touch</h2>
-        <p className="text-center text-gray-600 mb-6 text-sm">
+        <h2 className="text-4xl font-bold text-center text-gray-800 mb-2">
+          Get in Touch
+        </h2>
+        <p className="text-center text-green-400 mb-3 text-xs">Powered by n8n + spreadsheet + gmail response + tg</p>
+        <p className="text-center text-gray-600 mb-6 text-sm mt-4">
           Have a project or a question? Drop a message and I'll get back to you!
         </p>
         <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-5">
@@ -80,6 +97,9 @@ const ContactForm = () => {
             {loading ? "Sending..." : "Send Message"}
           </motion.button>
         </form>
+        {status && (
+          <p className="text-center mt-4 text-sm text-gray-700">{status}</p>
+        )}
       </div>
     </motion.div>
   );
