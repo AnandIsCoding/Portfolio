@@ -32,7 +32,7 @@ function App() {
       
        
        <Projects/>
-       <Eyes/>
+       {/* <Eyes/> */}
        <Scrolling/>
        
      </>}/>

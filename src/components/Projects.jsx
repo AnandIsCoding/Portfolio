@@ -5,6 +5,29 @@ import { ImGithub } from "react-icons/im";
 
 const projects = [
   {
+    title: "AI & Automation Playground – Live projects in Generative AI",
+    description:
+      "AI Ticket System (Moderator assignment with skills requirement matching using AI + Gemini + Inngest) + Multi Tool AI platform + Feedback System Automation + Product Recommendation",
+    tech: [
+      "n8n",
+      "Inngest",
+      "LLM",
+      "Gemini",
+      "Automation",
+      "PostgreSql"
+    ],
+    liveLink: "https://allgenaiprojects.web.app",
+    githubLink:
+      "https://github.com/AnandIsCoding/GenAi",
+    imagesMobile: [
+      "/Ticketing.png",
+      "/Combinedai.png",
+      "/Feedback.png",
+    ],
+    bgImage:
+      "https://cdn.dribbble.com/userupload/43803637/file/original-778062a38f1cd0dca027d1535300f14a.png?resize=400x300&vertical=center",
+  },
+  {
     title: "DevLinked – Social Media App",
     description:
       "A full-stack professional networking site with real-time chat, notifications, and cloud integration.",
